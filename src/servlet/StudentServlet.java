@@ -32,7 +32,6 @@ public class StudentServlet extends HttpServlet {
 		List<Student> list = sdao.getAll();
 		// 将整个集合保存到作用域中
 		req.setAttribute("list", list);
-		// 实现页面的跳转,因为这里的操作是查询，我们就使用转发
 		req.getRequestDispatcher("Index.jsp").forward(req, resp);	
 				
 			}
